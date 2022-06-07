@@ -13,14 +13,17 @@
 
 /* Create two equal columns that sits next to each other */
 .column {
-  flex: 50%;
-  padding: 0 4px;
+  flex-direction: column;
 }
 
 .column img {
   margin-top: 8px;
   vertical-align: middle;
 }
+ 
+ .title {
+ text-align: center;
+ }
 </style>
 <script>
       (async () => {
@@ -32,7 +35,6 @@
        for (let file of data) {
            htmlString = `<img src="./${file.path}" />`;
            columns[currentCol].innerHTML += htmlString;
-        currentCol += 1;
        }
        
        
@@ -43,20 +45,13 @@
 <body>
 
 
-<div class="">
+<div class="title">
  <h1 style="font-size: 4rem;">Kendall Currier Art</h1>
  <p><a href="mailto:blah@gmail.com?subject=Commission">Email me for commissions.</a></p>
+ <br />
 </div>
  
- <div class="row">
-  <div class="column">
-  </div>
-  <div class="column">
-  </div>
-  <div class="column">
-  </div>
-  <div class="column">
-  </div>
+ <div class="column">
 </div>
 
 </body>
