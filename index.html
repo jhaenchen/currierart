@@ -28,7 +28,7 @@
         const data = await response.json();
        let htmlString = ""
        for (let file of data) {
-           htmlString += `<img stc="${file.path}" />`;
+           htmlString += `<img src="./${file.path}" />`;
        }
 
 
