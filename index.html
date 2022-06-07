@@ -14,6 +14,8 @@
 /* Create two equal columns that sits next to each other */
 .column {
   flex-direction: column;
+display: flex;
+align-items: center;
 }
 
 .column img {
@@ -33,7 +35,7 @@
        let currentCol = 0;
        let htmlString = ""
        for (let file of data) {
-           htmlString = `<img src="./${file.path}" />`;
+           htmlString = `<img src="./${file.path}" href="mailto:blah@gmail.com?subject=I want to buy ${file.path}" />`;
            columns[currentCol].innerHTML += htmlString;
        }
        
@@ -47,8 +49,8 @@
 
 <div class="title">
  <h1 style="font-size: 4rem;">Kendall Currier Art</h1>
- <p><a href="mailto:blah@gmail.com?subject=Commission">Email me for commissions.</a></p>
- <br />
+ <p><a href="mailto:blah@gmail.com?subject=Commission">Email me for commissions.</a><br><i>Or click an image to buy it specifically.</i></p>
+ <hr />
 </div>
  
  <div class="column">
